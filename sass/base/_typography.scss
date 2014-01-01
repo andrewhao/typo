@@ -1,7 +1,7 @@
 $sans: "Helvetica Neue", Arial, sans-serif !default;
 $serif: "adobe-garamond-pro-1","adobe-garamond-pro-2", Georgia, serif !default;
 $mono: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace !default;
-$heading-font-family: "adobe-garamond-pro-1","adobe-garamond-pro-2", "Georgia", serif !default;
+$heading-font-family: "estilo-regular-1","estilo-regular-2",sans-serif;
 $header-title-font-family: $heading-font-family !default;
 $header-subtitle-font-family: $heading-font-family !default;
 
@@ -11,13 +11,11 @@ body {
 
 .hentry {
   .entry-title {
-    font-variant: small-caps;
-    font-size: 2em;
+    font-family: $heading-font-family;
+    text-transform: lowercase;
+    font-size: 2.5em;
     margin-bottom: 0.5em;
     letter-spacing: 0.2em;
-    &::first-letter {
-      font-size: 1.5em;
-    }
   }
   .entry-content {
     h2, h3, h4, h5, h6 {
@@ -41,6 +39,8 @@ body {
 // Fonts
 .heading {
   font-family: $heading-font-family;
+  text-transform: lowercase;
+  font-size: 1.2em;
 }
 .sans { font-family: $sans; }
 .serif { font-family: $serif; }
@@ -96,11 +96,12 @@ blockquote {
 /* Lettrines */
 .lettrine {
   & > p:first-child::first-letter, & > h2:first-child + p::first-letter {
+    font-family: $heading-font-family;
     line-height: 0.7;
-    margin: 0.225em 0.159em 0 0;
+    margin: .1em .1em 0 0;
     float: left;
     text-transform: capitalize;
-    font-size: 3.15em;
+    font-size: 3em;
   }
 }
 
